@@ -1,23 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import sideMenu from './components/SideBar/menuData';
+import ChangeTheTheme from './components/ChangeTheme';
+import Accordian from './components/accordian';
+import GetRandomColor from './components/RandomColorGenerator';
+import StarRating from './components/starRating';
+import ImageSlider from './components/imageSlider';
+import LoadMore from './components/LoadMoreData';
+import SideViewBar from './components/SideBar';
+import QrGenerator from './components/QrCodeGenerator';
+import ScrollBarPercentage from './components/ScrollIndicator';
+import tabData from './components/CustomTabs/data';
+import Tabs from './components/CustomTabs/Tabs';
+import data from './components/accordian/data';
+import ModelTest from './components/custom-model-popup/ModelTest';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Accordian/>
+      {/* <GetRandomColor/> */}
+      <StarRating 
+      noOfStars={10}
+      />
+      {/* <ImageSlider
+      url={"https://picsum.photos/v2/list"}
+      page={1}
+      limit={10}
+      /> */}
+      {/* <LoadMore/> */}
+      <SideViewBar menudata={sideMenu}/>
+      {/* <QrGenerator/> */}
+      <ChangeTheTheme />
+      {/* <ScrollBarPercentage url={'https://dummyjson.com/products?limit=100'}/> */}
+      <Tabs tData={tabData}/>
+      <ModelTest/>
+
+
+      
     </div>
   );
 }

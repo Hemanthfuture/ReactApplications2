@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.productsData{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+}
+.prodImage{
+    width: 150px;
+    height: 150px;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    padding: 10px;
+
+}
+.loadButton{
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+}
